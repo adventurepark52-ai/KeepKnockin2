@@ -64,7 +64,7 @@ export const ComparisonSection = (): JSX.Element => {
 
   return (
     <section className="w-full relative">
-      <Card className="w-full bg-[#e5e7eb] shadow-lg rounded-2xl border-r-4 border-b-4 border-black">
+      <Card className="w-full bg-[#e5e7eb] rounded-2xl border-r-4 border-b-4 border-black">
         <CardContent className="p-0">
           <div className="grid grid-cols-5 gap-0 rounded-2xl overflow-hidden">
             {/* Header Row */}
@@ -74,7 +74,7 @@ export const ComparisonSection = (): JSX.Element => {
                 key={platform.name}
                 className={`p-4 text-center ${
                   platform.isHighlighted 
-                    ? "bg-white shadow-sm" 
+                    ? "bg-white" 
                     : "bg-[#e5e7eb]"
                 }`}
               >
@@ -97,7 +97,7 @@ export const ComparisonSection = (): JSX.Element => {
                 </div>
 
                 {/* Keep Knockin' Column - White background */}
-                <div className="p-4 bg-white shadow-sm flex items-center">
+                <div className="p-4 bg-white flex items-center">
                   <span className="[font-family:'Poppins',Helvetica] font-medium text-[#6b7280] text-[12.2px] tracking-[0] leading-[19.1px]">
                     {feature.keepKnockin}
                   </span>
