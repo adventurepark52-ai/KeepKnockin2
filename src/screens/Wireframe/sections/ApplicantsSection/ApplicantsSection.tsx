@@ -10,16 +10,21 @@ const navigationItems = [
 export const ApplicantsSection = (): JSX.Element => {
   return (
     <section
-      className="w-full h-[60vh] relative bg-cover bg-center"
-      style={{ backgroundImage: "url('/src/assets/bg.jpg')" }}
+      className="w-full h-screen relative z-10"
+      style={{
+        backgroundImage: "url('/assets/bg.jpg')",
+        backgroundSize: '100% 600px',
+        backgroundPosition: 'center calc(50% - 50px)',
+        backgroundRepeat: 'no-repeat',
+        opacity: 0.9
+      }}
     >
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.65)_0%,rgba(217,217,217,0)_100%)] rounded-[30px]"></div>
 
       {/* Header */}
-      <header className="absolute top-11 left-0 right-0 flex items-center justify-between px-[93px] z-10">
+      <header className="absolute top-11 left-0 right-0 flex items-center justify-between px-[93px] z-20">
         <div className="flex items-center">
           <img
-            src="/src/assets/keepknockin_logo.png"
+            src="/assets/keepknockin_bw_logo.png"
             alt="Keep Knockin' Logo"
             width={176}
             height={41}
@@ -50,34 +55,58 @@ export const ApplicantsSection = (): JSX.Element => {
             Employer Login
           </Button>
 
-          <div className="w-10 h-10 rounded-full overflow-hidden">
-            <img
-              src="/src/assets/pic2.png"
-              alt="Menu/Profile Icon"
-              width={40}
-              height={40}
-              className="rounded-full"
-            />
+          {/* Menu and User Profile Icons */}
+          <div className="flex items-center gap-4">
+            <div className="w-10 h-10 flex items-center justify-center">
+              <img
+                src="/assets/menu.png"
+                alt="Menu Icon"
+                width={24}
+                height={24}
+                className="object-contain"
+              />
+            </div>
+            
+            <div className="w-10 h-10 rounded-full overflow-hidden">
+              <img
+                src="/assets/user.jpg"
+                alt="User Profile"
+                width={40}
+                height={40}
+                className="rounded-full object-cover"
+              />
+            </div>
           </div>
         </div>
       </header>
 
-      {/* Main Text Content */}
-      <main className="absolute top-[390px] left-12 right-12 z-10">
+      {/* Main Text Content - centered vertically */}
+      <main className="absolute inset-0 flex flex-col justify-center left-12 right-12 z-20 pt-20">
+        {/* Asterisk positioned above the heading */}
+        <div className="mb-6">
+          <img
+            src="/assets/asterisk-bw.png"
+            alt="Asterisk"
+            width={48}
+            height={48}
+            className="object-contain"
+          />
+        </div>
+        
         <h1 className="w-[1124px] [font-family:'Poppins',Helvetica] font-medium text-[#d6d717] text-[56px] tracking-[0] leading-[77px]">
           KNOCK ON THE RIGHT DOORS.
           <br />
           GET HIRED YOUR WAY.
         </h1>
 
-        <p className="w-[690px] mt-[160px] [font-family:'Poppins',Helvetica] font-normal text-[#d6d717] text-xl tracking-[0] leading-[33px]">
+        <p className="w-[690px] mt-8 [font-family:'Poppins',Helvetica] font-normal text-[#d6d717] text-xl tracking-[0] leading-[33px]">
           From finding the right opportunities to discovering events near
           you, this is where connections start and grow.
         </p>
       </main>
 
-      {/* Buttons on Right Side */}
-      <div className="absolute top-[514px] right-12 flex flex-col gap-[16px] z-10">
+      {/* Buttons on Right Side - positioned relative to center */}
+      <div className="absolute top-1/2 right-12 transform -translate-y-1/2 flex flex-col gap-[16px] z-20 mt-20">
         <Button className="w-[194px] h-[43px] bg-[#6735bc] rounded-lg shadow-game-shadow [font-family:'Poppins',Helvetica] font-medium text-[#f0f0f0] text-base text-center tracking-[0] leading-[19px] whitespace-nowrap hover:bg-[#6735bc]">
           Download now
         </Button>
