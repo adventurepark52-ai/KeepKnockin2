@@ -98,7 +98,7 @@ const eventData = [
 
 export const FeaturesSection = (): JSX.Element => {
   return (
-    <section className="w-full py-[74px] relative">
+    <section className="w-full py-[74px] relative z-10 bg-white">
       <header className="text-center mb-[74px]">
         <h2 className="[font-family:'Poppins',Helvetica] font-medium text-[#1d1d1d] text-2xl tracking-[0] leading-[37px]">
           EVENTS THAT MOVE CAREERS FORWARD
