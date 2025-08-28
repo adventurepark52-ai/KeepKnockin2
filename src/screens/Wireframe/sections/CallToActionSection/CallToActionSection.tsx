@@ -55,7 +55,7 @@ export const CallToActionSection = (): JSX.Element => {
               <span className="[font-family:'Poppins',Helvetica] font-semibold text-[#1d1d1d] text-sm tracking-[0.5px] uppercase">
                 FOLLOW US ON
               </span>
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-1">
                 {socialIcons.map((social, index) => (
                   <a
                     key={index}
