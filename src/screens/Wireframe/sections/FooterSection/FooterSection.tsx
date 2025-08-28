@@ -40,17 +40,17 @@ export const FooterSection = (): JSX.Element => {
       <Accordion type="single" collapsible className="w-full">
         {faqItems.map((item) => (
           <AccordionItem key={item.id} value={item.id} className="border-b">
-            <AccordionTrigger className="flex items-start gap-3 p-4 text-left hover:no-underline">
-              <div className="flex-1 [font-family:'Poppins',Helvetica] font-normal text-[#1d1d1d] text-base tracking-[0] leading-[normal]">
-                {item.question}
-              </div>
-            </AccordionTrigger>
-            <AccordionContent className="p-4 pt-0">
-              <div className="[font-family:'Poppins',Helvetica] font-normal text-[#666666] text-sm leading-relaxed">
-                {item.answer}
-              </div>
-            </AccordionContent>
-          </AccordionItem>
+  <AccordionTrigger className="p-4 text-left hover:no-underline" style={{gap: '4px'}}>
+    <span className="[font-family:'Poppins',Helvetica] font-normal text-[#1d1d1d] text-base tracking-[0] leading-[normal]">
+      {item.question}
+    </span>
+  </AccordionTrigger>
+  <AccordionContent className="p-4 pt-0">
+    <div className="[font-family:'Poppins',Helvetica] font-normal text-[#666666] text-sm leading-relaxed">
+      {item.answer}
+    </div>
+  </AccordionContent>
+</AccordionItem>
         ))}
       </Accordion>
     </div>
