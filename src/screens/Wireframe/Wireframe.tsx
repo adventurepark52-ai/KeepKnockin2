@@ -59,30 +59,38 @@ export const Wireframe = (): JSX.Element => {
             <div className="[font-family:'Poppins',Helvetica] font-normal text-[#9ca3af] text-lg tracking-[0] leading-[28px] max-w-[280px]">
               Hire fast via a clean, web-only dashboard
             </div>
-<Button className="w-[200px] h-auto bg-[#6735bc] hover:bg-[#5a2da0] rounded-xl px-8 py-4 shadow-[4px_4px_0px_#000000]">
-  <div className="[font-family:'Poppins',Helvetica] font-medium text-[#ffffff] text-base text-center tracking-[0] leading-[20px]">
-    Recruiter's Login
-  </div>
-</Button>
-
-
-            
-            {/* Explore Button - Updated tilted oval design */}
-            <div className="flex flex-col items-start gap-4 mt-12">
-              <div className="relative">
-                {/* Tilted oval button with text and arrow inside */}
-                <div className="w-[160px] h-[80px] bg-transparent border-2 border-[#6735bc] rounded-[80px] flex items-center justify-center gap-3 transform rotate-12">
-                  <span className="[font-family:'Poppins',Helvetica] font-bold text-[#6735bc] text-lg tracking-[0]">
-                    EXPLORE
-                  </span>
-                  {/* Medium-sized arrow */}
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="#6735bc" className="w-5 h-5">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
-                  </svg>
-                </div>
+            <Button className="w-[200px] h-auto bg-[#6735bc] hover:bg-[#5a2da0] rounded-xl px-8 py-4 shadow-[4px_4px_0px_#000000]">
+              <div className="[font-family:'Poppins',Helvetica] font-medium text-[#ffffff] text-base text-center tracking-[0] leading-[20px]">
+                Recruiter's Login
               </div>
-            </div>
+            </Button>
 
+{/* Explore Button - Opposite direction tilt */}
+<div className="flex flex-col items-start gap-4 mt-12">
+  <div className="relative">
+    {/* Perfect oval button tilted in opposite direction */}
+    <div className="w-[200px] h-[120px] bg-white border-2 border-[#6735bc] rounded-full relative transition-all duration-300 hover:bg-[#6735bc] group cursor-pointer transform -rotate-45">
+      
+      {/* Arrow positioned in upper right - counter-rotated to stay upright */}
+      <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        fill="none" 
+        viewBox="0 0 24 24" 
+        strokeWidth="1" 
+        stroke="#6735bc" 
+        className="w-20 h-25 group-hover:stroke-white transition-colors duration-300 absolute top-4 right-6 transform rotate-45"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+      </svg>
+      
+      {/* EXPLORE text positioned in lower left - counter-rotated to stay readable */}
+      <span className="font-['Poppins',Helvetica] font-bold text-[#6735bc] text-lg tracking-wide group-hover:text-white transition-colors duration-300 absolute bottom-8 left-8 transform rotate-45">
+        EXPLORE
+      </span>
+      
+    </div>
+  </div>
+</div>
           </div>
 
           {/* Mobile Screens - Updated with offset positioning */}
@@ -116,12 +124,11 @@ export const Wireframe = (): JSX.Element => {
             <div className="[font-family:'Poppins',Helvetica] font-normal text-[#9ca3af] text-lg tracking-[0] leading-[28px] max-w-[280px]">
               Apply from your phone, get noticed, show your vibe
             </div>
-<Button className="w-[200px] h-auto bg-[#d6d717] hover:bg-[#c4c516] rounded-xl px-8 py-4 shadow-[4px_4px_0px_#000000]">
-  <div className="text-[#1d1d1d] [font-family:'Poppins',Helvetica] font-medium text-base text-center tracking-[0] leading-[20px]">
-    Download App
-  </div>
-</Button>
-
+            <Button className="w-[200px] h-auto bg-[#d6d717] hover:bg-[#c4c516] rounded-xl px-8 py-4 shadow-[4px_4px_0px_#000000]">
+              <div className="text-[#1d1d1d] [font-family:'Poppins',Helvetica] font-medium text-base text-center tracking-[0] leading-[20px]">
+                Download App
+              </div>
+            </Button>
           </div>
         </div>
 
