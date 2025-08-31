@@ -15,37 +15,37 @@ export const Wireframe = (): JSX.Element => {
         <ApplicantsSection />
 
         {/* Backed By Section - positioned directly below hero */}
-        <div className="flex flex-col w-full items-center gap-10 py-12 mb-16 relative z-10 bg-white">
+        <div className="flex flex-col w-full items-center gap-8 py-12 mb-16 relative z-10 bg-white">
           <div className="[font-family:'Poppins',Helvetica] font-medium text-[#1d1d1d] text-xl text-center tracking-[0] leading-[41px]">
             BACKED BY
           </div>
-          <div className="flex items-center justify-center gap-12">
+          <div className="flex items-center justify-center gap-8 lg:gap-12 flex-wrap">
             <img
               src="/assets/product.png"
               alt="Product Logo"
-              width={200}
-              height={75}
+              width={160}
+              height={60}
               className="opacity-100"
             />
             <img
               src="/assets/midas.png"
               alt="Midas Logo"
-              width={125}
+              width={100}
               height={60}
               className="opacity-100"
             />
             <img
               src="/assets/circle.png"
               alt="Circle Logo"
-              width={200}
-              height={75}
+              width={160}
+              height={60}
               className="opacity-100"
             />
             <img
               src="/assets/waveless.png"
               alt="Waveless Logo"
-              width={200}
-              height={75}
+              width={160}
+              height={60}
               className="opacity-100"
             />
           </div>
