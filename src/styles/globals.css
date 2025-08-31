@@ -214,10 +214,81 @@ html {
   }
 }
 
-@media (min-width: 1024px) {
+/* Enhanced responsive design for different laptop sizes */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  :root {
+    --section-padding: 60px 0;
+    --container-padding: 0 24px;
+  }
+  
+  /* Adjust font sizes for smaller laptops */
+  .hero-text {
+    font-size: 48px !important;
+    line-height: 64px !important;
+  }
+  
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1280px) and (max-width: 1439px) {
+  :root {
+    --section-padding: 70px 0;
+    --container-padding: 0 32px;
+  }
+  
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1440px) {
   :root {
     --section-padding: 80px 0;
     --container-padding: 0 40px;
+  }
+  
+  .container {
+    max-width: 1440px;
+  }
+}
+
+/* Specific fixes for 13-14 inch screens */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  /* Ensure proper scaling without zoom issues */
+  body {
+    zoom: 1;
+    transform: scale(1);
+  }
+  
+  /* Adjust header spacing */
+  header {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+  
+  /* Ensure borders are visible */
+  .border, .border-b, .border-t, .border-l, .border-r {
+    border-width: 1px !important;
+  }
+  
+  /* Adjust main content spacing */
+  .px-16 {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+  
+  /* Ensure proper button sizing */
+  .btn, button {
+    min-height: 40px;
+    padding: 8px 16px;
+  }
+  
+  /* Fix accordion spacing */
+  .accordion-trigger {
+    padding: 12px 16px !important;
+    gap: 8px !important;
   }
 }
 

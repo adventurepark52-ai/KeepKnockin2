@@ -27,7 +27,7 @@ export const CallToActionSection = (): JSX.Element => {
         </h2>
         
         {/* App Store buttons side by side */}
-        <div className="flex flex-row items-center justify-center gap-6 mb-8">
+        <div id="download" className="flex flex-row items-center justify-center gap-6 mb-8">
           <a href="#" className="group transition-all duration-300 hover:scale-105">
             <img src={app_store} alt="App Store Badge" className="h-12 w-auto" />
           </a>

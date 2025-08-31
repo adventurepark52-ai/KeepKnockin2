@@ -6,6 +6,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '320px',
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1440px',
+        '13inch': '1280px',
+        '14inch': '1366px',
+        '15inch': '1440px',
+        '16inch': '1536px',
+      },
       colors: {
         "dark-gray": "var(--dark-gray)",
         "lined-gray": "var(--lined-gray)",
