@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Button } from "../../components/ui/button";
 import { ApplicantsSection } from "./sections/ApplicantsSection/ApplicantsSection";
 import { CallToActionSection } from "./sections/CallToActionSection/CallToActionSection";
@@ -61,7 +62,9 @@ export const Wireframe = (): JSX.Element => {
             </div>
             <Button className="w-[200px] h-auto bg-[#6735bc] hover:bg-[#5a2da0] rounded-xl px-8 py-4 shadow-[4px_4px_0px_#000000]">
               <div className="[font-family:'Poppins',Helvetica] font-medium text-[#ffffff] text-base text-center tracking-[0] leading-[20px]">
-                Recruiter's Login
+                <Link to="/recruiter-login" className="block w-full h-full">
+                  Recruiter's Login
+                </Link>
               </div>
             </Button>
 
@@ -126,7 +129,9 @@ export const Wireframe = (): JSX.Element => {
             </div>
             <Button className="w-[200px] h-auto bg-[#d6d717] hover:bg-[#c4c516] rounded-xl px-8 py-4 shadow-[4px_4px_0px_#000000]">
               <div className="text-[#1d1d1d] [font-family:'Poppins',Helvetica] font-medium text-base text-center tracking-[0] leading-[20px]">
-                Download App
+                <a href="#download" className="block w-full h-full">
+                  Download App
+                </a>
               </div>
             </Button>
           </div>

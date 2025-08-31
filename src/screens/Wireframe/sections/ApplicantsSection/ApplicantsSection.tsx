@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Button } from "../../../../components/ui/button";
 
 const navigationItems = [
@@ -34,30 +35,35 @@ export const ApplicantsSection = (): JSX.Element => {
 
         <nav className="flex items-center gap-[65px]">
           {navigationItems.map((item, index) => (
-            <div
+            <Link
+              to={item.label === "Home" ? "/" : `/${item.label.toLowerCase()}`}
               key={index}
-              className="[font-family:'Poppins',Helvetica] font-medium text-[#d6d717] text-sm text-center tracking-[0] leading-[19px] whitespace-nowrap"
+              className="[font-family:'Poppins',Helvetica] font-medium text-[#d6d717] text-sm text-center tracking-[0] leading-[19px] whitespace-nowrap hover:text-white transition-colors cursor-pointer"
             >
               {item.label}
-            </div>
+            </Link>
           ))}
         </nav>
 
         <div className="flex items-center gap-5">
-          <Button
-            variant="outline"
-            className="h-auto px-[27px] py-2 bg-[#1d1d1d] rounded-[43px] border border-solid border-[#d6d717] shadow-[2px_2px_0px_#d6d717] [font-family:'Poppins',Helvetica] font-medium text-[#d6d717] text-sm text-center tracking-[0] leading-[23px] whitespace-nowrap hover:bg-[#1d1d1d]"
-          >
-            Applicant Login
-          </Button>
+          <Link to="/applicant-login">
+            <Button
+              variant="outline"
+              className="h-auto px-[27px] py-2 bg-[#1d1d1d] rounded-[43px] border border-solid border-[#d6d717] shadow-[2px_2px_0px_#d6d717] [font-family:'Poppins',Helvetica] font-medium text-[#d6d717] text-sm text-center tracking-[0] leading-[23px] whitespace-nowrap hover:bg-[#d6d717] hover:text-[#1d1d1d] transition-all"
+            >
+              Applicant Login
+            </Button>
+          </Link>
 
-          <Button className="h-auto px-[27px] py-2.5 bg-[#d6d717] rounded-[36px] shadow-[2px_2px_0px_#1d1d1d] [font-family:'Poppins',Helvetica] font-medium text-[#1d1d1d] text-sm text-center tracking-[0] leading-[19px] whitespace-nowrap hover:bg-[#d6d717]">
-            Employer Login
-          </Button>
+          <Link to="/employer-login">
+            <Button className="h-auto px-[27px] py-2.5 bg-[#d6d717] rounded-[36px] shadow-[2px_2px_0px_#1d1d1d] [font-family:'Poppins',Helvetica] font-medium text-[#1d1d1d] text-sm text-center tracking-[0] leading-[19px] whitespace-nowrap hover:bg-[#c4c516] transition-all">
+              Employer Login
+            </Button>
+          </Link>
 
           {/* Menu and User Profile Icons */}
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 flex items-center justify-center">
+            <button className="w-10 h-10 flex items-center justify-center hover:bg-white/10 rounded-lg transition-colors cursor-pointer">
               <img
                 src="/assets/menu.png"
                 alt="Menu Icon"
@@ -65,9 +71,9 @@ export const ApplicantsSection = (): JSX.Element => {
                 height={24}
                 className="object-contain"
               />
-            </div>
+            </button>
             
-            <div className="w-10 h-10 rounded-full overflow-hidden">
+            <button className="w-10 h-10 rounded-full overflow-hidden hover:ring-2 hover:ring-[#d6d717] transition-all cursor-pointer">
               <img
                 src="/assets/user.jpg"
                 alt="User Profile"
@@ -75,7 +81,7 @@ export const ApplicantsSection = (): JSX.Element => {
                 height={40}
                 className="rounded-full object-cover"
               />
-            </div>
+            </button>
           </div>
         </div>
       </header>
@@ -107,13 +113,17 @@ export const ApplicantsSection = (): JSX.Element => {
 
       {/* Buttons on Right Side - positioned relative to center */}
       <div className="absolute top-1/2 right-12 transform -translate-y-1/2 flex flex-col gap-[16px] z-20 mt-20">
-        <Button className="w-[194px] h-[43px] bg-[#6735bc] rounded-lg shadow-game-shadow [font-family:'Poppins',Helvetica] font-medium text-[#f0f0f0] text-base text-center tracking-[0] leading-[19px] whitespace-nowrap hover:bg-[#6735bc]">
-          Download now
-        </Button>
+        <a href="#download" className="block">
+          <Button className="w-[194px] h-[43px] bg-[#6735bc] rounded-lg shadow-game-shadow [font-family:'Poppins',Helvetica] font-medium text-[#f0f0f0] text-base text-center tracking-[0] leading-[19px] whitespace-nowrap hover:bg-[#5a2da0] transition-all">
+            Download now
+          </Button>
+        </a>
 
-        <Button className="w-[194px] h-[43px] bg-[#d6d717] rounded-lg shadow-game-shadow [font-family:'Poppins',Helvetica] font-medium text-[#1d1d1d] text-base text-center tracking-[0] leading-[19px] whitespace-nowrap hover:bg-[#d6d717]">
-          Recruiter&apos;s login
-        </Button>
+        <Link to="/recruiter-login" className="block">
+          <Button className="w-[194px] h-[43px] bg-[#d6d717] rounded-lg shadow-game-shadow [font-family:'Poppins',Helvetica] font-medium text-[#1d1d1d] text-base text-center tracking-[0] leading-[19px] whitespace-nowrap hover:bg-[#c4c516] transition-all">
+            Recruiter&apos;s login
+          </Button>
+        </Link>
       </div>
     </section>
   );

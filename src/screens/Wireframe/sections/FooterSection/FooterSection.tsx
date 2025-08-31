@@ -40,12 +40,12 @@ export const FooterSection = (): JSX.Element => {
       <Accordion type="single" collapsible className="w-full">
         {faqItems.map((item) => (
           <AccordionItem key={item.id} value={item.id} className="border-b">
-  <AccordionTrigger className="p-4 text-left hover:no-underline" style={{gap: '4px'}}>
+  <AccordionTrigger className="px-4 py-3 text-left hover:no-underline gap-2">
     <span className="[font-family:'Poppins',Helvetica] font-normal text-[#1d1d1d] text-base tracking-[0] leading-[normal]">
       {item.question}
     </span>
   </AccordionTrigger>
-  <AccordionContent className="p-4 pt-0">
+  <AccordionContent className="px-4 pb-3 pt-0">
     <div className="[font-family:'Poppins',Helvetica] font-normal text-[#666666] text-sm leading-relaxed">
       {item.answer}
     </div>
